@@ -41,7 +41,7 @@ abstract contract ERC721Enum is ERC721, IERC721Enumerable {
         require(0 < ERC721.balanceOf(owner), "ERC721Enum: owner ioob");
         uint256 tokenCount = balanceOf(owner);
         uint256[] memory tokenIds = new uint256[](tokenCount);
-        for (uint256 i = 0; i < tokenCount; i++) {
+        for (uint256 i = 0; i <= tokenCount; i++) {
             tokenIds[i] = tokenOfOwnerByIndex(owner, i);
         }
         return tokenIds;
