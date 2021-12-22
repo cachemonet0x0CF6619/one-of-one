@@ -1,16 +1,17 @@
 {
-  "name": "ERC721Slim",
-  "version": "0.1.0",
+  "name": "ERC721OneOfOne",
+  "version": "0.0.1",
   "private": true,
   "funding": {
     "type" : "individual",
-    "url" : "cachem.eth"
+    "url" : "cachemon.eth"
   },
   "author": "cachem.eth",
   "license" : "MIT",
   "scripts": {
     "test:hardhat": "npx hardhat test",
     "test:cov": "npx hardhat coverage",
+    "gas": "npx hardhat test",
     "test": "npm run test:cov"
   },
   "dependencies": {
@@ -25,6 +26,7 @@
     "ethereum-waffle": "^3.0.0",
     "ethers": "^5.0.0",
     "hardhat": "^2.6.4",
+    "hardhat-deploy": "^0.9.14",
     "hardhat-gas-reporter": "^1.0.4",
     "solhint": "^3.3.6",
     "solidity-coverage": "^0.7.17"

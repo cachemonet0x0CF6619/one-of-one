@@ -1,7 +1,7 @@
 const hre = require('hardhat')
 
 async function main() {
-  const Contract = await hre.ethers.getContractFactory('Divy');
+  const Contract = await hre.ethers.getContractFactory('ERC721Slim');
   const contract = await Contract.deploy(...require('./deploy-args'));
   console.log(contract.address);
 }

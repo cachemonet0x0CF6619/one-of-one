@@ -1,7 +1,4 @@
 module.exports = [
-  [
-    "0xYourAddress",
-    "0xAnotherAddress"
-  ],
-  [50, 50]
+  ["0x0CF661907E76C4921f7dF302092697799dc63B24"],
+  [100]
 ];
