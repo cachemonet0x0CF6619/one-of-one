@@ -1,7 +1,6 @@
 // SPDX-License-Identifier: GPL-3.0
-pragma solidity ^0.8.9;
+pragma solidity ^0.8.10;
 
-import "../Strings.sol";
 import "../ERC721OneOfOne.sol";
 
 contract ERC721Mock is ERC721OneOfOne {
@@ -13,13 +12,6 @@ contract ERC721Mock is ERC721OneOfOne {
 
     function tokenURI(uint256 tokenId) public pure returns (string memory) {
         if (tokenId != 1) revert NonExistentToken();
-        return
-            string(
-                abi.encodePacked(
-                    "ipfs://example.com/",
-                    Strings.toString(tokenId),
-                    ".json"
-                )
-            );
+        return "ifps://example.com/1.json";
     }
 }
