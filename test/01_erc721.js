@@ -3,7 +3,6 @@ const { deployments, ethers } = require('hardhat');
 
 const _INTERFACE_ID_ERC165 = '0x01ffc9a7';
 const _INTERFACE_ID_ERC721 = '0x80ac58cd';
-const _INTERFACE_ID_IERC721ENUMERABLE = '0x780e9d63';
 
 describe('ERC721', function () {
   let contract;
