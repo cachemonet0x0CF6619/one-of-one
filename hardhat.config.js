@@ -5,6 +5,8 @@ require('hardhat-deploy');
 require('hardhat-gas-reporter');
 require('solidity-coverage');
 
+const PRIVATE_KEY = process.env.PRIVATE_KEY || '1'.repeat(64);
+
 module.exports = {
   defaultNetwork: 'hardhat',
   etherscan: {
@@ -14,7 +16,7 @@ module.exports = {
     hardhat: { chainId: 1337 },
     rinkeby: {
       url: `https://rinkeby.infura.io/v3/${process.env.PROJECT_ID}`,
-      accounts: [`0x${process.env.PK}`],
+      accounts: [`0x${PRIVATE_KEY}`],
     },
   },
   solidity: {
