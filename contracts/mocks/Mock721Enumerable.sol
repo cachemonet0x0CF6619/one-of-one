@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: GPL-3.0
 pragma solidity ^0.8.10;
 
-import "../ERC721OneOfOne.sol";
+import "../ERC721Enumerable.sol";
 
-contract ERC721Mock is ERC721OneOfOne {
+contract MockERC721Enumerable is ERC721Enumberable {
     constructor(address to) ERC721("OneOfOne", "1_1") {
         if (to == address(0)) revert ZeroAddressError();
         holder = to;

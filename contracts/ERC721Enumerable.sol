@@ -3,7 +3,7 @@ pragma solidity ^0.8.10;
 import "./ERC721.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/IERC721Enumerable.sol";
 
-abstract contract ERC721OneOfOne is ERC721, IERC721Enumerable {
+abstract contract ERC721Enumberable is ERC721, IERC721Enumerable {
     /// @dev revert attempt to enumerate non-existing tokens
     error TokenNotOwned();
 
@@ -41,7 +41,7 @@ abstract contract ERC721OneOfOne is ERC721, IERC721Enumerable {
         override
         returns (uint256)
     {
-        if (index != ERC721OneOfOne.totalSupply()) revert TokenNotOwned();
+        if (index != totalSupply()) revert TokenNotOwned();
         return index;
     }
 }
